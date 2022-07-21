@@ -1,0 +1,170 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 title="标题">一级标题</h1>
+        <h2>二级标题</h2>
+        <h3>三级标题</h3>
+        <h4>四级标题</h4>
+        <h5>五级标题</h5>
+        <h6>六级标题</h6>
+        <hr> <!--注释-->
+        <p>段落</p>
+        <p>12345<br>67890</p>
+        <b>加粗</b>&nbsp;<strong>加粗</strong><br>
+        <u>下划线</u>&nbsp;<ins>下划线</ins><br>
+        <i>倾斜</i>&nbsp;<em>倾斜</em><br>
+        <s>删除线</s>&nbsp;<del>删除线</del><br>
+        <hr>
+        <img src="image/picture1.jpg" alt="替换文本" title="鼠标悬停时显示的文本" width="200">
+        <img src="./image/picture1.jpg" width="200"><br>
+        <!--显示播放控件controls、自动播放autoplay（部分浏览器不支持）、循环播放loop-->
+        <audio src="./audio/wake.mp3" controls autoplay loop></audio><br>
+        <!--可以自动播放视频，但必须静音autoplay muted-->
+        <video src="./video/space.mp4" controls width="400" loop></video><br>
+        <!--href:跳转地址-->
+        <a href="https://www.baidu.com/" target="_blank">百度</a><br>
+        <!--target属性默认_self-->
+        <a href="./test2.html" target="_self">超链接</a><br>
+        <a href="#">空链接</a>
+        <hr>
+        <!--无序列表-->
+        <!--ul标签里只能出现li标签,li标签里可以其他标签-->
+        <ul>
+            <li>ele1</li>
+            <li>ele2</li>
+            <li>ele3</li>
+            <li>ele4</li>
+            <li><strong>ele5</strong></li>
+        </ul>
+        <!--有序列表-->
+        <!--同上-->
+        <ol>
+            <li>ele1</li>
+            <li>ele2</li>
+            <li>ele3</li>
+            <li>ele4</li>
+            <li><strong>ele5</strong></li>
+        </ol>
+        <!--自定义列表-->
+        <!--dd标签前默认缩进-->
+        <dl>
+            <dt>主题标题</dt>
+            <dd>ele1</dd>
+            <dd>ele2</dd>
+            <dd>ele3</dd>
+        </dl>
+        <hr>
+        <!--表格-->
+        <!--实际操作中，width和height一般在CSS中设置-->
+        <table border="1" width="250" height="100">
+            <caption>表格大标题</caption>
+            <thead>
+                <tr>
+                    <th>第一列</th>
+                    <th>第二列</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--第一行-->
+                <tr>
+                    <td>第一行第一列</td>
+                    <td>第一行第二列</td>
+                </tr>
+                <!--第二行-->
+                <tr>
+                    <td>第二行第一列</td>
+                    <td>第二行第二列</td>
+                </tr>
+                <!--第三行-->
+                <tr>
+                    <td>第三行第一列</td>
+                    <td>第三行第二列</td>
+                </tr>
+            </tbody>
+            <!--合并，左上原则(左上保留，其余删除)-->
+            <!--colspan跨列合并，rowspan跨行合并-->
+            <!--不能跨结构标签合并-->
+            <tfoot>
+                <tr>
+                    <td colspan="2">总结</td>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
+        <!--表单标签-->
+        <form action="">
+            文本框：<input type="text" placeholder="占位符，提示输入内容" name="" id="">
+            <br><br>
+            密码框：<input type="password" name="" id="">
+            <br><br>
+            <!--相同name属性的为一组-->
+            <!--checked默认选中-->
+            <!--label标签用于将内容与表单标签绑定,两种方法-->
+            <!--id属性与for属性相同-->
+            单选框：<input type="radio" name="radio" checked id="1"><label for="1">1</label>
+                    <label><input type="radio" name="radio" id="">2</label>
+            <br><br>
+            多选框：<input type="checkbox" name="checkbox" checked id="">1
+                    <input type="checkbox" name="checkbox" id="">2
+                    <input type="checkbox" name="checkbox" id="">3
+            <br><br>
+            <!--multiple属性用于上传多个文件-->
+            上传文件：<input type="file" multiple name="" id="">
+            <br><br>
+            <!--下拉菜单-->
+            下拉菜单：<select name="" id="">
+                        <option selected value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+            <br><br>
+            <!--cols可见宽度，rows可见行数-->
+            <!--一般通过CSS设置长宽 -->
+            文本域：<textarea name="" id="" cols="30" rows="10"></textarea>
+            <br><br>
+            提交按钮：<input type="submit" value="提交">
+            <br><br>
+            <!--重置所在form标签内的内容-->
+            重置按钮：<input type="reset" value="重置">
+            <br><br>
+            按钮：<input type="button" value="按钮文字">
+            <br><br>
+            提交：<button type="submit">submit</button><br><br>
+            重置：<button type="reset">reset</button><br><br>
+            按钮：<button type="button">button</button><br><br>
+        </form>
+        <hr>
+        <!--布局标签-->
+        <!--不含语义的布局标签-->
+        <div>
+            <!--独占一行-->
+            div
+        </div>
+        <div>div</div>
+        <span>
+            <!--一行可以显示多个-->
+            span
+        </span>
+        <span>span</span>
+        <hr>
+        <!--含语义的布局标签-->
+        <!--手机网页中使用-->
+        <header>网页头部</header>
+        <nav>网页导航</nav>
+        <footer>网页底部</footer>
+        <aside>网页侧边栏</aside>
+        <section>网页区块</section>
+        <article>网页文章</article>
+        <hr>
+        <!--字符实体-->
+        <p>12    34</p><!--网页只认为有一个空格-->
+        <p>12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34</p>
+    </body>
+    </html>
